@@ -84,7 +84,7 @@ print(str.upper())
 print(str.lower())
 
 # 4-3. replace() : 문자열 내의 특정 문자 치환
-print(str.replace("H","J"))
+print(str.replace(("H","J")))
 
 # 4-4. split() : 구분자를 기준으로 문자열 분할(Default: 공백)
 b = "hello world what a nice weather"
