@@ -91,7 +91,7 @@ print(a)
 # 튜플 원소가 1개인 경우!
 a = (1, 2, 3)  # tuple
 b = 1, 2, 3    # tuple
-c = (1)        # tuple
+c = (1)       # tuple
 d = 1          # int
 e = 1,         # tuple
 print(type(b))
@@ -127,7 +127,7 @@ print(set_a)
 # a = list(a) # ()안의 값을 list type으로 변경
 # a = set(a) # ()안의 값을 set type으로 변경
 a = ["A", "A", "B", "B", "C"]  # List type
-print(list(set(a))
+print(list(set(a)))
 
 # 4. 사전(dict) ex: 복주머니
 #  - 순서가 없음(인덱스 없음, 정렬 불가)
@@ -141,13 +141,13 @@ print(list(set(a))
 #  - {"id":"abc123", "pw":"@!123", "name":"체리"}
 #  - *****Python의 dict == JSON***** list보다 많이쓴대
 
-# print("="*100)
-# dict_a = {"korea": "Seoul",
-#           "Canada": "Ottaws",
-#           "USA": "Washington D.C"}
-# print(dict_a)
-# import pprint
-# pprint.pprint(dict_a)
+print("="*100)
+dict_a = {"korea": "Seoul",
+           "Canada": "Ottaws",
+           "USA": "Washington D.C"}
+print(dict_a)
+import pprint
+pprint.pprint(dict_a)
 # 이거 왜 안돼는지 다시 해보기(144-150)
 
 # update() : dict와 dict 병합
@@ -159,7 +159,7 @@ a.update(b)
 print(a)  # 병합시 중복key는 입력값(b)이 우선
 
 # pop(key) : dict 원소를 key를 통해 삭제
-f = {"a":1, "b":2, "c":3}
+abc = {"a":1, "b":2, "c":3}
 c = abc.pop("a")
 print(abc)
 print(c)
@@ -172,7 +172,7 @@ print("f" in abc)
 # list, tuple. dict 접근
 #  -> 컬레션[index or key]
 #  -> ex: a[1], b["c"]
-print(abc["f"]) # key가 없으면 Error 발생
+#print(abc["f"])     key가 없으면 Error 발생
 print(a.get("f"))  # key가 없으면 None 출력(Error 없음)
 
 # keys(), values(), items()
@@ -190,3 +190,21 @@ print(abc)
 
 a = {}
 print(type(a))
+
+# 컬렉션 타입
+# 1. List  0 1 2 3 4 5  [] 수정가능
+# 2. Tuple -6 -5 -4 -3 -2 -1 () 수정 불가능   사용금지
+# (1,2,3) -> 1,2,3
+# (1) -> 1 int인식 1, , 해주기콤마
+#
+# 3. Dict 항아리 복주머니 {key:value}
+# 4. Set {} 중복값허용x
+# list(), tuple(), set() set타입으로 바꿔줌 {}dict로 바꿔줌
+
+# dict: JSON(데이터 전송포맷)
+
+
+
+
+
+
