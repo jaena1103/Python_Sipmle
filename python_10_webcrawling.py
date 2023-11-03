@@ -109,6 +109,3 @@ for p in content_list:
 
 print(f"본문: {content}")
 
-# 날짜 정보 수집해서 출력
-date = doc.select("span.num_date")[0].get_text()
-print(date)
