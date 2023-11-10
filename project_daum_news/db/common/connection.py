@@ -59,9 +59,9 @@ from pymongo import MongoClient
 # MongoDB Connection
 def conn_mongodb():
     # URL, ID, PW
-    DB_ID = ""  # 상수(전체 대문자로 변수명을 사용)
-    DB_PW = ""  # 예시) 은행에서 금리(상수)
-    client = MongoClient(f"")  # URL
+    DB_ID = "root"  # 상수(전체 대문자로 변수명을 사용)
+    DB_PW = "1234"  # 예시) 은행에서 금리(상수)
+    client = MongoClient(f"mongodb+srv://{DB_ID}:{DB_PW}@daumcluster.lieaywx.mongodb.net/")  # URL
     db = client["daum"]
     collection = db.get_collection("news")
     return collection
