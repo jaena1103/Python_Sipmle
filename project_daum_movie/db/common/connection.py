@@ -20,3 +20,21 @@ import pymysql
 # -> 이미있으면 심플 클릭 f5누르고 화살표 누르면 표 나옴
 # -> 없으면
 
+def connection():
+    try:
+        conn = pymysql.connect(
+            host="127.0.0.1",
+            port=3306,
+            user="root",
+            password="1234",
+            db="simple",
+            charset="utf8",
+            autocommit=True,
+            cursorclass=pymysql.cursoors.DictCusor
+        )
+        return conn
+    except pymysql.Error as e:
+        print(f"MARIADB 연결 실패 {e}")
+
+
+
