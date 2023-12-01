@@ -86,7 +86,9 @@ def review_collector(movie_code):
     print(f"= 전체 리뷰: {len(review_list)}건")
 
     # item: 리뷰 1건(평점, 리뷰, 작성자, 작성일자)
+    count = 0
     for item in review_list:
+        count += 1
         print("=" * 100)
         review_score = item.select("div.ratings")[0].get_text()
         print(f"  - 평점: {review_score}")
@@ -128,4 +130,12 @@ def review_collector(movie_code):
             "reg_date": review_date
         }
         add_review(data)
+
+    # 수집한 리뷰 건수 출력
+    now = datetime.now().strftime("%Y.%m.%d %H:%M:%S")
+    print(f"{now} → 수집한 리뷰 {count}건")
+
+
+
+
 
