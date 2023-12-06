@@ -48,3 +48,17 @@ def get_last_review():
         conn.close()
 
 
+def get_reviews():
+    conn = connection()
+
+    try:
+        curs = conn.cursor()
+        sql = """
+                SELECT * FROM tbl_review
+              """
+        curs.execute(sql)
+        return curs.fetchall()
+    except Exception as e:
+        print(e)
+    finally:
+        conn.close()
