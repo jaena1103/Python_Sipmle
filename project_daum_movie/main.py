@@ -29,7 +29,7 @@ def main():
     scheduler = BlockingScheduler()
     scheduler.add_job(review_collector,
                       args=[movie_code],
-                      trigger="crpn",
+                      trigger="cron",
                       hour="12",
                       minute="0")
     scheduler.start()
